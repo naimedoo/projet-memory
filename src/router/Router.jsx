@@ -6,13 +6,12 @@ import Player2 from '../routes/Player2';
 class Router extends React.Component{
     constructor() {
       super();
+
     }
   
     render() {
       return (
         <>
-        
-
         <Routes>
             <Route path="/player"element={<Player/>}/>
             <Route path="/player2"element={<Player2/>}/>
