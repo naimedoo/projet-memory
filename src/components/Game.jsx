@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import Router from './router/Router';
+import Game from "react"
 
-
-class App extends React.Component() {
+class Game extends React.Component() {
   constructor(props) {
     super(props);
   }
@@ -11,10 +10,10 @@ class App extends React.Component() {
   render() {
     return (
       <div>
-        <Router />
+       
       </div>
     );
   }
 }
 
-export default App;
+export default Game;
