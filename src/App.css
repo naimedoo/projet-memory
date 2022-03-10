@@ -5,11 +5,11 @@ body{
 img{
   width: 100px;
   height: 100px;
-  
+  opacity: 0%;
 }
 
 .animIn{
-  animation: pictureIn 2s linear;
+  animation: picture 2s ease-in-out;
   
 }
 .line{
@@ -35,7 +35,7 @@ img{
  }
 
 
- @keyframes pictureIn {
+ @keyframes picture {
    0%{
      opacity: 0%;
    }
