@@ -22,7 +22,6 @@ class App extends React.Component {
         <Link to="/player"></Link>
         <Link to="/player2"></Link>
         <Router />
-        <Button />
       </div>
     );
   }
