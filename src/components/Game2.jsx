@@ -1,6 +1,6 @@
 import React from "react";
 
-class Game extends React.Component {
+class Game2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -34,14 +34,9 @@ class Game extends React.Component {
 
     ImageAnime = (id) =>{
         let name = 'image' + id
-        if(this.state.image1 === true || this.state.image2 === true || this.state.image3 === true || this.state.image4 === true || this.state.image5 === true || this.state.image6 === true || this.state.image7 === true || this.state.image8 === true || this.state.image9 === true || this.state.image10 === true || this.state.image11 === true || this.state.image12 === true || this.state.image13 === true || this.state.image14 === true || this.state.image15 === true || this.state.image16 === true){
-            this.setState({[name]: true})
-            setTimeout(() =>{this.setState({[name]: false})}, 5000)
-            setTimeout(() =>{this.setState({[name]: false})}, 5000)
-
-        }else{
         this.setState({[name]: true})
-        }
+        // console.log(id)
+        setTimeout(() =>{this.setState({[name]: false})}, 5000)
     }
 
     render() {
@@ -76,4 +71,4 @@ class Game extends React.Component {
     }
 }
 
-export default Game;
+export default Game2;
