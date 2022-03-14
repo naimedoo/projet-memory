@@ -1,6 +1,7 @@
-import React from 'react'
-import Score from '../components/Score1.jsx'
-import Game from '../components/Game'
+import React from 'react';
+import Score from '../components/Score1.jsx';
+import Game from '../components/Game';
+
 
 class Player extends React.Component{
     constructor() {
@@ -17,4 +18,4 @@ class Player extends React.Component{
     }
   }
   
-  export default Player;
+export default Player;
