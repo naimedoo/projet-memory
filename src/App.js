@@ -5,7 +5,8 @@ import Score1 from'./components/Score1.jsx'
 import Score2 from './components/Score2.jsx';
 
 import Router from './router/Router.jsx';
-import { Link } from 'react-router-dom';
+
+import Button from './components/Button';
 
 
 class App extends React.Component {
@@ -17,11 +18,7 @@ class App extends React.Component {
     return (
       <div>
         <Router />
-        <div>
-        <Link to="/player">1-Joueur</Link> | 
-        <Link to="/player2">2-Joueur</Link> | 
-        </div>
-        
+        <Button/>
       </div>
     );
   }
