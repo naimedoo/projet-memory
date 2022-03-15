@@ -28,7 +28,7 @@ class Game extends React.Component {
     }
 
     // ComponentDidMount = () =>{
-    //     let picture = []
+    //     let picture = []git branch
 
     // }
 
