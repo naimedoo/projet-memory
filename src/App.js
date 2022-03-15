@@ -19,7 +19,6 @@ class App extends React.Component {
     return (
       <div id="main">
         <Game/>
-        <Score1/>
       </div>
     );
   }
