@@ -3,6 +3,7 @@ import './App.css';
 
 import Score1 from'./components/Score1.jsx'
 import Score2 from './components/Score2.jsx';
+import Game from './components/Game'
 
 import Router from './router/Router.jsx';
 
@@ -16,9 +17,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Router />
-        <Button/>
+      <div id="main">
+        <Game/>
+        <Score1/>
       </div>
     );
   }

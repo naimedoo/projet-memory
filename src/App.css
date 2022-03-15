@@ -1,7 +1,10 @@
 body{
   margin: 0;
-  
+  background-image: url(../public/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
+
 
 img{
   width: 100px;
@@ -19,8 +22,7 @@ img{
   justify-content: center;
   height: 80%;
   width: 70%;
-  padding-left: 50px;
-  margin-left: 80px;
+  
 }
 .card{
   width: 225px;
@@ -80,14 +82,54 @@ img{
   justify-content: flex-end;
   padding: 20px;
   margin: 5px;
-  top: -300px;
+  
   border: 1px solid black;
-  border-radius: 8px;
+  background-color: rgb(185, 218, 111);
+  border-radius: 15px;
   width: 300px;
   align-items: center;
   justify-content: space-evenly;
-  top: -336px;
-  right: 21px;
+  top: -280px;
+  right: 15px;
   position: absolute;
+  text-align: center;
+ 
+}
+.flex-end a{
+  color: rgb(134, 123, 49);
+  font-size: large;
+  font-weight: bolder;
+
+}
+
+.scoreCard{
+
+
+ 
+ 
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 25px;
+  background-color:rgb(197, 154, 202);
+  height: 250px;
+  width: 250px;
+  color: rgb(134, 123, 49);
+  
+
+}
+#main{
+  display: flex;
+  flex-direction: column-reverse;
+
 }
   
+@media screen and (max-width: 924px){
+  .end{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 100px;
+    
+  }
+}
