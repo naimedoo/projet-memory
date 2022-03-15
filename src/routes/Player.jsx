@@ -1,6 +1,7 @@
-import React from 'react';
-import Score from '../components/Score1.jsx';
-import Game from '../components/Game';
+import React from 'react'
+import Score from '../components/Score1.jsx'
+import Game from '../components/Game'
+import Score1 from '../components/Score1.jsx';
 
 
 class Player extends React.Component{
@@ -10,9 +11,8 @@ class Player extends React.Component{
   
     render() {
       return (
-        <div>
-       <Score />
-       <Game />
+        <div className='container'>
+          <Game />
        </div>
       );
     }
