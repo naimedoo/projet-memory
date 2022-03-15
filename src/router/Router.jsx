@@ -11,7 +11,7 @@ class Router extends React.Component{
   
     render() {
       return (
-        <div>
+        <div id='players'>
           <Routes>
               <Route path="/player"element={<Player/>}/>
               <Route path="/player2"element={<Player2/>}/>
