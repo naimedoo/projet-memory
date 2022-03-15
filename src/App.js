@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Score1 from'./components/Score1.jsx'
+import Score from'./components/Score.jsx'
 import Score2 from './components/Score2.jsx';
 
 import Router from './router/Router.jsx';
