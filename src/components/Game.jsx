@@ -7,8 +7,9 @@ class Game extends React.Component {
         this.state = {
             picture: [],
             selectedPicture: [],
-            foundPicture: [],
             lastMove: 0,
+            score: 0,
+            time: 0,
             image0: false,
             image1: false,
             image2: false,
@@ -46,20 +47,25 @@ class Game extends React.Component {
     isPair = (tableau) => {
         console.log("Pair :", [...tableau])
         if (tableau.length === 2) {
-            if (tableau[0].src === tableau[1].src) {
-                let name1 = "image" + tableau[0].id
-                let name2 = "image" + tableau[1].id
-                let state = { ...this.state }
-                this.setState({[name1] : "found"})
-                this.setState({[name2] : "found"})
-                console.log("pair :" + state)
-                this.setState({ state })
-                this.setState({ selectedPicture: [] })
-                return true
+            if (tableau[0].id !== tableau[1].id) {
+                if (tableau[0].src === tableau[1].src) {
+                    let name1 = "image" + tableau[0].id
+                    let name2 = "image" + tableau[1].id
+                    let state = { ...this.state }
+                    this.setState({ [name1]: "found", [name2]: "found" })
+                    console.log("pair :" + state)
+                    this.setState({ state })
+                    let scorePlus = this.state.score;
+                    scorePlus++
+                    this.setState({ score: scorePlus, selectedPicture: [] })
+                    return true
+                } else {
+                    this.setState({ selectedPicture: [] })
+                }
             } else {
                 this.setState({ selectedPicture: [] })
             }
-        }
+        } 
 
         return false
 
@@ -85,51 +91,51 @@ class Game extends React.Component {
                         setTimeout(() => { this.setState({ image0: false }) }, time)
                     }
                     if (this.state.image1 !== "found") {
-                    setTimeout(() => { this.setState({ image1: false }) }, time)
+                        setTimeout(() => { this.setState({ image1: false }) }, time)
                     }
                     if (this.state.image2 !== "found") {
-                    setTimeout(() => { this.setState({ image2: false }) }, time)
+                        setTimeout(() => { this.setState({ image2: false }) }, time)
                     }
                     if (this.state.image3 !== "found") {
-                    setTimeout(() => { this.setState({ image3: false }) }, time)
+                        setTimeout(() => { this.setState({ image3: false }) }, time)
                     }
                     if (this.state.image4 !== "found") {
-                    setTimeout(() => { this.setState({ image4: false }) }, time)
+                        setTimeout(() => { this.setState({ image4: false }) }, time)
                     }
                     if (this.state.image5 !== "found") {
-                    setTimeout(() => { this.setState({ image5: false }) }, time)
+                        setTimeout(() => { this.setState({ image5: false }) }, time)
                     }
                     if (this.state.image6 !== "found") {
-                    setTimeout(() => { this.setState({ image6: false }) }, time)
+                        setTimeout(() => { this.setState({ image6: false }) }, time)
                     }
                     if (this.state.image7 !== "found") {
-                    setTimeout(() => { this.setState({ image7: false }) }, time)
+                        setTimeout(() => { this.setState({ image7: false }) }, time)
                     }
                     if (this.state.image8 !== "found") {
-                    setTimeout(() => { this.setState({ image8: false }) }, time)
+                        setTimeout(() => { this.setState({ image8: false }) }, time)
                     }
                     if (this.state.image9 !== "found") {
-                    setTimeout(() => { this.setState({ image9: false }) }, time)
+                        setTimeout(() => { this.setState({ image9: false }) }, time)
                     }
                     if (this.state.image10 !== "found") {
-                    setTimeout(() => { this.setState({ image10: false }) }, time)
+                        setTimeout(() => { this.setState({ image10: false }) }, time)
                     }
                     if (this.state.image11 !== "found") {
-                    setTimeout(() => { this.setState({ image11: false }) }, time)
+                        setTimeout(() => { this.setState({ image11: false }) }, time)
                     }
                     if (this.state.image12 !== "found") {
-                    setTimeout(() => { this.setState({ image12: false }) }, time)
+                        setTimeout(() => { this.setState({ image12: false }) }, time)
                     }
                     if (this.state.image13 !== "found") {
-                    setTimeout(() => { this.setState({ image13: false }) }, time)
+                        setTimeout(() => { this.setState({ image13: false }) }, time)
                     }
                     if (this.state.image14 !== "found") {
-                    setTimeout(() => { this.setState({ image14: false }) }, time)
+                        setTimeout(() => { this.setState({ image14: false }) }, time)
                     }
                     if (this.state.image15 !== "found") {
-                    setTimeout(() => { this.setState({ image15: false }) }, time)
+                        setTimeout(() => { this.setState({ image15: false }) }, time)
                     }
-                    
+
                     this.setState({ lastMove: Date.now() })
                 }
             } else {
@@ -173,7 +179,7 @@ class Game extends React.Component {
     render() {
         return (
             <div>
-                <Score />
+                <Score score1={this.state.score} />
                 <div className="line" >
                     <div className="card" onClick={(e) => { this.imageAnime(0, e) }}><img className={this.state.image0 ? "animIn" : ""} src={this.state.picture[0]} /></div>
                     <div className="card" onClick={(e) => { this.imageAnime(1, e) }}><img className={this.state.image1 ? "animIn" : ""} src={this.state.picture[1]} /></div>
