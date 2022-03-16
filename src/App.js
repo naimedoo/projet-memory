@@ -18,9 +18,16 @@ class App extends React.Component {
   render() {
     return (
       <div id="main">
-        <Game/>
-        <Score1/>
+        <div>
+          <Game/>
+        </div>
+
+        <div>
+          <Score1/>
+          <Button/>
+        </div>
       </div>
+      
     );
   }
 }

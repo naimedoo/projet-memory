@@ -11,12 +11,12 @@ class Score1 extends React.Component{
   
     render() {
       return (
-        <div className='end'>
+    
           <div className='scoreCard'>
                   <h1>Score</h1>
                   <h3>Player 1:{this.props.score1}</h3>            
           </div>
-        </div>
+  
       );
     }
   }

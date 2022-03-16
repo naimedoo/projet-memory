@@ -1,18 +1,12 @@
+.scoreCard{
 
-
-
-
-/* .scoreCard{
-
-    display: flex;
-    position: relative;
-    top: -240px;
+   display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
     border: 1px solid black;
-    padding: 15px;
-    border-radius: 25px;
+    margin: 140px;
+    border-radius: 15px;
     background-color:rgb(197, 154, 202);
     height: 250px;
     width: 250px;
@@ -21,17 +15,11 @@
 
     
 }
-.end{
+
+  #main
+  {
     display: flex;
-    justify-content: flex-end;
-    position: relative;
-    bottom: -47px;
-    color: rgb(134, 123, 49);
+
+  }
   
-  
-  } */
-  
-  /* @media screen and (max-width: 900px){
-   
-   
-  } */
+

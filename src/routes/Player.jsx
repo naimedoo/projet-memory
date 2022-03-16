@@ -1,7 +1,7 @@
 import React from 'react'
 import Score from '../components/Score1.jsx'
 import Game from '../components/Game'
-import Score1 from '../components/Score1.jsx';
+
 
 class Player extends React.Component{
     constructor() {
@@ -10,9 +10,9 @@ class Player extends React.Component{
   
     render() {
       return (
-        <div className='container'>
-          <Score/>
-          <Game />
+        <div>
+       <Score />
+       <Game />
        </div>
       );
     }

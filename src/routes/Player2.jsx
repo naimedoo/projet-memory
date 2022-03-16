@@ -12,8 +12,10 @@ class Player2 extends React.Component{
       return (
        
         <div className='container'>
-          <Score2 />
+        
           <Game2/>
+          <Score2 />
+          
         </div>
        
       );
