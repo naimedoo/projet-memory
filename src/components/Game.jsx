@@ -9,6 +9,7 @@ class Game extends React.Component {
             selectedPicture: [],
             lastMove: 0,
             score: 0,
+            turn: 0,
             time: Date.now(),
             image0: false,
             image1: false,
@@ -57,10 +58,14 @@ class Game extends React.Component {
                     this.setState({ state })
                     let scorePlus = this.state.score;
                     scorePlus++
-                    this.setState({ score: scorePlus, selectedPicture: [] })
+                    let turn = this.state.turn
+                    turn++
+                    this.setState({ score: scorePlus, selectedPicture: [], turn })
                     return true
                 } else {
-                    this.setState({ selectedPicture: [] })
+                    let turn = this.state.turn
+                    turn++
+                    this.setState({ selectedPicture: [], turn })
                 }
             } else {
                 this.setState({ selectedPicture: [] })
@@ -149,37 +154,10 @@ class Game extends React.Component {
         }
     }
 
-
-    // RandomImage = () => {
-    //     if (this.state.picture.length > 0) {
-    //         let numPicture = this.state.numPicture
-    //         let num = Math.round((Math.random() * (this.state.numPicture - 1)) + 1)
-    //         let picture = [...this.state.picture]
-    //         let removePicture = picture.splice(num, 1)
-    //         numPicture--
-    //         console.log(removePicture[0])
-    //         return (
-    //             removePicture[0]
-    //         )
-    //     } else {
-    //         let numPicture = this.state.numPicture
-    //         let num = Math.round((Math.random() * (this.state.numPicture - 1)) + 1)
-    //         let picture = [...this.state.picture]
-    //         let removePicture = picture.splice(num, 1)
-    //         numPicture--
-    //         this.setState({ numPicture })
-    //         this.setState({ picture })
-    //         console.log(numPicture)
-    //         return (
-    //             removePicture[0]
-    //         )
-    //     }
-    // }
-
     render() {
         return (
             <div>
-                <Score score1={this.state.score} />
+                <Score score1={this.state.score} turn={this.state.turn}/>
                 <div className="line" >
                     <div className="card" onClick={(e) => { this.imageAnime(0, e) }}><img className={this.state.image0 ? "animIn" : ""} src={this.state.picture[0]} /></div>
                     <div className="card" onClick={(e) => { this.imageAnime(1, e) }}><img className={this.state.image1 ? "animIn" : ""} src={this.state.picture[1]} /></div>
