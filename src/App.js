@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import Router from './router/Router';
-import Button from './components/Button';
+import Router from './router/Router.jsx';
 import { Link } from 'react-router-dom';
 
 
-class App extends React.Component{
+class App extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -13,10 +12,12 @@ class App extends React.Component{
   render() {
     return (
       <div>
-        <Link to="/player"></Link>
-        <Link to="/player2"></Link>
         <Router />
-        <Button />
+        <div>
+        <Link to="/player">1-Joueur</Link> | 
+        <Link to="/player2">2-Joueur</Link> | 
+        </div>
+        
       </div>
     );
   }

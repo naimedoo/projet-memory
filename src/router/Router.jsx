@@ -6,6 +6,7 @@ import Player2 from '../routes/Player2';
 class Router extends React.Component{
     constructor() {
       super();
+
     }
   
     render() {

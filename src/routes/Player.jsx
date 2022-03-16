@@ -1,6 +1,5 @@
 import React from 'react'
-import Score from './components/Score'
-import Game from './components/Game'
+import Game from '../components/Game'
 
 class Player extends React.Component{
     constructor() {
@@ -10,7 +9,6 @@ class Player extends React.Component{
     render() {
       return (
         <div>
-       <Score />
        <Game />
        </div>
       );
