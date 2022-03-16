@@ -1,5 +1,4 @@
 import React from 'react'
-import Score from '../components/Score1.jsx'
 import Game from '../components/Game'
 import Score1 from '../components/Score1.jsx';
 
