@@ -1,6 +1,5 @@
 import React from "react";
-import Score from "./Score"
-
+import Score from "./Score";
 class Game extends React.Component {
     constructor(props) {
         super(props);
@@ -182,6 +181,8 @@ class Game extends React.Component {
                     <div className="card" onClick={(e) => { this.imageAnime(14, e) }}><img className={this.state.image14 ? "animIn" : ""} src={this.state.picture[14]} /></div>
                     <div className="card" onClick={(e) => { this.imageAnime(15, e) }}><img className={this.state.image15 ? "animIn" : ""} src={this.state.picture[15]} /></div>
                 </div>
+               
+                
             </div>
         );
     }

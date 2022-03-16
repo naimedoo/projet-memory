@@ -1,5 +1,6 @@
 import React from 'react'
 import Game from '../components/Game'
+import Score1 from '../components/Score1';
 
 class Player extends React.Component{
     constructor() {
@@ -8,11 +9,11 @@ class Player extends React.Component{
   
     render() {
       return (
-        <div>
-       <Game />
+        <div className='container'>
+          <Game />
        </div>
       );
     }
   }
   
-  export default Player;
+export default Player;
