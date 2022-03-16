@@ -9,7 +9,7 @@ class Game extends React.Component {
             selectedPicture: [],
             lastMove: 0,
             score: 0,
-            time: 0,
+            time: Date.now(),
             image0: false,
             image1: false,
             image2: false,
