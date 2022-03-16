@@ -1,24 +1,26 @@
 import React from 'react';
 import './App.css';
-import Router from './router/Router.jsx';
-import { Link } from 'react-router-dom';
+import Game from './components/Game'
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  
   render() {
     return (
-      <div>
-        <Router />
+      <div id="main">
         <div>
-        <Link to="/player">1-Joueur</Link> | 
-        <Link to="/player2">2-Joueur</Link> | 
+          <Game/>
         </div>
-        
+
+        <div>
+          <Score1/>
+          <Button/>
+        </div>
       </div>
+      
     );
   }
 }

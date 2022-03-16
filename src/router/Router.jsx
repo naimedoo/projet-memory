@@ -11,12 +11,12 @@ class Router extends React.Component{
   
     render() {
       return (
-        <>
-        <Routes>
-            <Route path="/player"element={<Player/>}/>
-            <Route path="/player2"element={<Player2/>}/>
-       </Routes>
-        </>
+        <div id='players'>
+          <Routes>
+              <Route path="/player"element={<Player/>}/>
+              <Route path="/player2"element={<Player2/>}/>
+          </Routes>
+        </div>
       );
     }
   }
