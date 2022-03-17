@@ -6,7 +6,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover; 
   z-index: -1;
-  
+  overflow: hidden;
 }
 
 img{
@@ -74,7 +74,7 @@ img{
 }
 
 .flex-end a{
-  color: rgb(0, 0, 0);
+  color: rgb(98, 47, 0);
   font-size: large;
   font-weight: bolder;
   display: flex;

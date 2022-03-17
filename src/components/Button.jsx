@@ -6,7 +6,7 @@ class Button extends React.Component{
         return(
             <div className='flex-end'>
                 <Link to="/">1-Player</Link> | 
-                <Link to="/player2">2-Player</Link> |
+                <Link to="/player2">2-Players</Link> 
             </div>
          
         )
