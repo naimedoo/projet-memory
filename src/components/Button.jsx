@@ -10,7 +10,6 @@ class Button extends React.Component{
             </div>
          
         )
-
     }
 }
 export default Button;

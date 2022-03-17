@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Game from './components/Game'
+import Router from './router/Router'
+import Button from './components/Button';
 
 
 class App extends React.Component {
@@ -12,11 +13,9 @@ class App extends React.Component {
     return (
       <div id="main">
         <div>
-          <Game/>
+          <Router/>
         </div>
-
         <div>
-          <Score1/>
           <Button/>
         </div>
       </div>
