@@ -8,7 +8,7 @@ class WinPlayer2 extends React.Component {
     render() {
         return (
             <>
-            <p>{`${this.props.player} as gagné avec ${this.props.scoreWin} points`}</p>
+            <p id='win'>{this.props.player}</p>
             <button onClick= {() => window.location.reload()}>Restart</button>
             </>
         )
