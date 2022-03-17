@@ -63,14 +63,13 @@ img{
 .flex-end{
   display: flex;
   padding: 20px;
-  padding-right: 5px;
   margin: 5px;
   border: 1px solid black;
   background-color: rgb(245, 149, 235);
   border-radius: 15px;
   text-align: center;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .flex-end a{
@@ -89,7 +88,6 @@ img{
    align-items: baseline;
    border: 1px solid black;
    border-radius: 15px;
-   margin-top: 60px;
    background-color:rgb(101, 114, 255);
    height: 350px;
    width: 350px;
@@ -144,3 +142,34 @@ img{
   font-size: 2em;
   font-family: Fredoka;
  }
+
+ button{
+  background-color: #000000; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Fredoka;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px
+ }
+
+ #win{
+  display: flex;
+  padding: 20px;
+  margin: 5px;
+  border: 1px solid black;
+  background-color: rgb(241, 241, 226);
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: Fredoka;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 25px;
+ }
+ 
