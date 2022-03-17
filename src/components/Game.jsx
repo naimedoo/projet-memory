@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 import Score from "./Score";
 class Game extends React.Component {
     constructor(props) {
@@ -69,7 +70,7 @@ class Game extends React.Component {
             } else {
                 this.setState({ selectedPicture: [] })
             }
-        } 
+        }
 
         return false
 
@@ -81,108 +82,115 @@ class Game extends React.Component {
         const time = 500
         if (Date.now() - this.state.lastMove > time) {
             console.log(Date.now() - this.state.lastMove)
-            if (this.state.image0 === true || this.state.image1 === true || this.state.image2 === true || this.state.image3 === true || this.state.image4 === true || this.state.image5 === true || this.state.image6 === true || this.state.image7 === true || this.state.image8 === true || this.state.image9 === true || this.state.image10 === true || this.state.image11 === true || this.state.image12 === true || this.state.image13 === true || this.state.image14 === true || this.state.image15 === true) {
-                let picture = { src: e.target.children[0].src, id: id }
-                let selectedPicture = [...this.state.selectedPicture]
-                selectedPicture.push(picture)
-                this.setState({ selectedPicture: [...selectedPicture], [name]: true })
-                console.log(this.state.selectedPicture)
-                let pair = this.isPair(selectedPicture)
-                console.log(pair)
-                if (pair === false) {
-                    let found = this.state.foundPicture
-                    if (this.state.image0 !== "found") {
-                        setTimeout(() => { this.setState({ image0: false }) }, time)
-                    }
-                    if (this.state.image1 !== "found") {
-                        setTimeout(() => { this.setState({ image1: false }) }, time)
-                    }
-                    if (this.state.image2 !== "found") {
-                        setTimeout(() => { this.setState({ image2: false }) }, time)
-                    }
-                    if (this.state.image3 !== "found") {
-                        setTimeout(() => { this.setState({ image3: false }) }, time)
-                    }
-                    if (this.state.image4 !== "found") {
-                        setTimeout(() => { this.setState({ image4: false }) }, time)
-                    }
-                    if (this.state.image5 !== "found") {
-                        setTimeout(() => { this.setState({ image5: false }) }, time)
-                    }
-                    if (this.state.image6 !== "found") {
-                        setTimeout(() => { this.setState({ image6: false }) }, time)
-                    }
-                    if (this.state.image7 !== "found") {
-                        setTimeout(() => { this.setState({ image7: false }) }, time)
-                    }
-                    if (this.state.image8 !== "found") {
-                        setTimeout(() => { this.setState({ image8: false }) }, time)
-                    }
-                    if (this.state.image9 !== "found") {
-                        setTimeout(() => { this.setState({ image9: false }) }, time)
-                    }
-                    if (this.state.image10 !== "found") {
-                        setTimeout(() => { this.setState({ image10: false }) }, time)
-                    }
-                    if (this.state.image11 !== "found") {
-                        setTimeout(() => { this.setState({ image11: false }) }, time)
-                    }
-                    if (this.state.image12 !== "found") {
-                        setTimeout(() => { this.setState({ image12: false }) }, time)
-                    }
-                    if (this.state.image13 !== "found") {
-                        setTimeout(() => { this.setState({ image13: false }) }, time)
-                    }
-                    if (this.state.image14 !== "found") {
-                        setTimeout(() => { this.setState({ image14: false }) }, time)
-                    }
-                    if (this.state.image15 !== "found") {
-                        setTimeout(() => { this.setState({ image15: false }) }, time)
-                    }
+            if (this.state[name] !== "found") {
+                if (this.state.image0 === true || this.state.image1 === true || this.state.image2 === true || this.state.image3 === true || this.state.image4 === true || this.state.image5 === true || this.state.image6 === true || this.state.image7 === true || this.state.image8 === true || this.state.image9 === true || this.state.image10 === true || this.state.image11 === true || this.state.image12 === true || this.state.image13 === true || this.state.image14 === true || this.state.image15 === true) {
+                    let picture = { src: e.target.children[0].src, id: id }
+                    let selectedPicture = [...this.state.selectedPicture]
+                    selectedPicture.push(picture)
+                    this.setState({ selectedPicture: [...selectedPicture], [name]: true })
+                    console.log(this.state.selectedPicture)
+                    let pair = this.isPair(selectedPicture)
+                    console.log(pair)
+                    if (pair === false) {
+                        let found = this.state.foundPicture
+                        if (this.state.image0 !== "found") {
+                            setTimeout(() => { this.setState({ image0: false }) }, time)
+                        }
+                        if (this.state.image1 !== "found") {
+                            setTimeout(() => { this.setState({ image1: false }) }, time)
+                        }
+                        if (this.state.image2 !== "found") {
+                            setTimeout(() => { this.setState({ image2: false }) }, time)
+                        }
+                        if (this.state.image3 !== "found") {
+                            setTimeout(() => { this.setState({ image3: false }) }, time)
+                        }
+                        if (this.state.image4 !== "found") {
+                            setTimeout(() => { this.setState({ image4: false }) }, time)
+                        }
+                        if (this.state.image5 !== "found") {
+                            setTimeout(() => { this.setState({ image5: false }) }, time)
+                        }
+                        if (this.state.image6 !== "found") {
+                            setTimeout(() => { this.setState({ image6: false }) }, time)
+                        }
+                        if (this.state.image7 !== "found") {
+                            setTimeout(() => { this.setState({ image7: false }) }, time)
+                        }
+                        if (this.state.image8 !== "found") {
+                            setTimeout(() => { this.setState({ image8: false }) }, time)
+                        }
+                        if (this.state.image9 !== "found") {
+                            setTimeout(() => { this.setState({ image9: false }) }, time)
+                        }
+                        if (this.state.image10 !== "found") {
+                            setTimeout(() => { this.setState({ image10: false }) }, time)
+                        }
+                        if (this.state.image11 !== "found") {
+                            setTimeout(() => { this.setState({ image11: false }) }, time)
+                        }
+                        if (this.state.image12 !== "found") {
+                            setTimeout(() => { this.setState({ image12: false }) }, time)
+                        }
+                        if (this.state.image13 !== "found") {
+                            setTimeout(() => { this.setState({ image13: false }) }, time)
+                        }
+                        if (this.state.image14 !== "found") {
+                            setTimeout(() => { this.setState({ image14: false }) }, time)
+                        }
+                        if (this.state.image15 !== "found") {
+                            setTimeout(() => { this.setState({ image15: false }) }, time)
+                        }
 
-                    this.setState({ lastMove: Date.now() })
+                        this.setState({ lastMove: Date.now() })
+                    }
+                } else {
+
+                    // console.log(this.state.picture)
+                    let picture = { src: e.target.children[0].src, id: id }
+                    let selectedPicture = [...this.state.selectedPicture]
+                    selectedPicture.push(picture)
+                    this.setState({ selectedPicture: [...selectedPicture], lastMove: Date.now(), [name]: true })
+                    this.isPair(selectedPicture)
+
                 }
-            } else {
-                // console.log(this.state.picture)
-                let picture = { src: e.target.children[0].src, id: id }
-                let selectedPicture = [...this.state.selectedPicture]
-                selectedPicture.push(picture)
-                this.setState({ selectedPicture: [...selectedPicture], lastMove: Date.now(), [name]: true })
-                this.isPair(selectedPicture)
             }
         }
     }
 
     render() {
         return (
-            <div>
-                <Score score1={this.state.score} turn={this.state.turn}/>
-                <div className="line" >
-                    <div className="card" onClick={(e) => { this.imageAnime(0, e) }}><img className={this.state.image0 ? "animIn" : ""} src={this.state.picture[0]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(1, e) }}><img className={this.state.image1 ? "animIn" : ""} src={this.state.picture[1]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(2, e) }}><img className={this.state.image2 ? "animIn" : ""} src={this.state.picture[2]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(3, e) }}><img className={this.state.image3 ? "animIn" : ""} src={this.state.picture[3]} /></div>
+            <div id='table'>
+                <div id='game'>
+                    <div className="line" >
+                        <div className="card" onClick={(e) => { this.imageAnime(0, e) }}><img className={this.state.image0 ? "animIn" : ""} src={this.state.picture[0]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(1, e) }}><img className={this.state.image1 ? "animIn" : ""} src={this.state.picture[1]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(2, e) }}><img className={this.state.image2 ? "animIn" : ""} src={this.state.picture[2]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(3, e) }}><img className={this.state.image3 ? "animIn" : ""} src={this.state.picture[3]} /></div>
+                    </div>
+                    <div className="line">
+                        <div className="card" onClick={(e) => { this.imageAnime(4, e) }}><img className={this.state.image4 ? "animIn" : ""} src={this.state.picture[4]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(5, e) }}><img className={this.state.image5 ? "animIn" : ""} src={this.state.picture[5]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(6, e) }}><img className={this.state.image6 ? "animIn" : ""} src={this.state.picture[6]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(7, e) }}><img className={this.state.image7 ? "animIn" : ""} src={this.state.picture[7]} /></div>
+                    </div>
+                    <div className="line">
+                        <div className="card" onClick={(e) => { this.imageAnime(8, e) }}><img className={this.state.image8 ? "animIn" : ""} src={this.state.picture[8]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(9, e) }}><img className={this.state.image9 ? "animIn" : ""} src={this.state.picture[9]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(10, e) }}><img className={this.state.image10 ? "animIn" : ""} src={this.state.picture[10]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(11, e) }}><img className={this.state.image11 ? "animIn" : ""} src={this.state.picture[11]} /></div>
+                    </div>
+                    <div className="line">
+                        <div className="card" onClick={(e) => { this.imageAnime(12, e) }}><img className={this.state.image12 ? "animIn" : ""} src={this.state.picture[12]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(13, e) }}><img className={this.state.image13 ? "animIn" : ""} src={this.state.picture[13]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(14, e) }}><img className={this.state.image14 ? "animIn" : ""} src={this.state.picture[14]} /></div>
+                        <div className="card" onClick={(e) => { this.imageAnime(15, e) }}><img className={this.state.image15 ? "animIn" : ""} src={this.state.picture[15]} /></div>
+                    </div>
                 </div>
-                <div className="line">
-                    <div className="card" onClick={(e) => { this.imageAnime(4, e) }}><img className={this.state.image4 ? "animIn" : ""} src={this.state.picture[4]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(5, e) }}><img className={this.state.image5 ? "animIn" : ""} src={this.state.picture[5]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(6, e) }}><img className={this.state.image6 ? "animIn" : ""} src={this.state.picture[6]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(7, e) }}><img className={this.state.image7 ? "animIn" : ""} src={this.state.picture[7]} /></div>
+                <div id='other'>
+                    <Score score1={this.state.score} turn={this.state.turn} />
+                    <Button />
                 </div>
-                <div className="line">
-                    <div className="card" onClick={(e) => { this.imageAnime(8, e) }}><img className={this.state.image8 ? "animIn" : ""} src={this.state.picture[8]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(9, e) }}><img className={this.state.image9 ? "animIn" : ""} src={this.state.picture[9]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(10, e) }}><img className={this.state.image10 ? "animIn" : ""} src={this.state.picture[10]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(11, e) }}><img className={this.state.image11 ? "animIn" : ""} src={this.state.picture[11]} /></div>
-                </div>
-                <div className="line">
-                    <div className="card" onClick={(e) => { this.imageAnime(12, e) }}><img className={this.state.image12 ? "animIn" : ""} src={this.state.picture[12]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(13, e) }}><img className={this.state.image13 ? "animIn" : ""} src={this.state.picture[13]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(14, e) }}><img className={this.state.image14 ? "animIn" : ""} src={this.state.picture[14]} /></div>
-                    <div className="card" onClick={(e) => { this.imageAnime(15, e) }}><img className={this.state.image15 ? "animIn" : ""} src={this.state.picture[15]} /></div>
-                </div>
-               
-                
             </div>
         );
     }

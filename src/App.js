@@ -1,26 +1,22 @@
 import React from 'react';
 import './App.css';
-import Game from './components/Game'
+import Router from "./router/Router"
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
     return (
-      <div id="main">
-        <div>
-          <Game/>
-        </div>
-
-        <div>
-          <Score1/>
-          <Button/>
+      <div>
+        <h1>Emo-Memo</h1>
+        <div id="main">
+          <Router />
         </div>
       </div>
-      
+
     );
   }
 }
