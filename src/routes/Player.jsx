@@ -1,7 +1,6 @@
 import React from 'react'
 import Game from '../components/Game'
-import Score1 from '../components/Score1.jsx';
-
+import Score from '../components/Score';
 
 class Player extends React.Component{
     constructor() {

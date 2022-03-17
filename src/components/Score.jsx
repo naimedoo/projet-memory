@@ -11,11 +11,10 @@ class Score extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Score</h1>
-        <h3>Player 1: <b>{this.props.score1}</b></h3>
-        <h4>Turn: {this.props.turn}</h4>
-      </div>
+        <div className='scoreCard'>
+          <h1>Score</h1>
+          <h2>{100 - this.props.turn}</h2>
+        </div>
     );
   }
 }
