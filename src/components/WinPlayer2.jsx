@@ -1,6 +1,6 @@
 import React from 'react';
 
-class WinPlayer extends React.Component {
+class WinPlayer2 extends React.Component {
     constructor(props) {
         super(props)
       
@@ -8,9 +8,10 @@ class WinPlayer extends React.Component {
     render() {
         return (
             <>
+            <p id='win'>{this.props.player}</p>
             <button onClick= {() => window.location.reload()}>Restart</button>
             </>
         )
     }
 } 
-export default WinPlayer
+export default WinPlayer2
